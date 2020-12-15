@@ -1,0 +1,16 @@
+Host jump
+  HostName example.com
+  User near
+  Port 2201
+  IdentityFile ~/.ssh/id_rsa
+Host next
+  HostName localhost
+  User www
+  Port 10022
+  IdentityFile ~/.ssh/id_rsa
+  # 普通の場合
+  ProxyCommand ssh -W %h:%p jump
+  # Windows10のOpenSSH 7.xの場合
+  #ProxyCommand C:\Windows\System32\OpenSSH\ssh.exe -l %r -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null jump  -W %h:%p
+  # MacやLinuxの場合
+  #ProxyCommand ssh -l %r -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null jump  -W %h:%p
