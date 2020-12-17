@@ -1,11 +1,11 @@
 Host jump
   HostName example.com
-  User near
-  Port 2201
+  User user
+  Port 22001
   IdentityFile ~/.ssh/id_rsa
 Host next
   HostName localhost
-  User www
+  User user
   Port 10022
   IdentityFile ~/.ssh/id_rsa
   # 普通の場合
